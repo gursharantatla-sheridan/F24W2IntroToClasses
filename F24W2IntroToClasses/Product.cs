@@ -13,6 +13,13 @@ namespace F24W2IntroToClasses
         private string _name;
         private double _price;
 
+        // property
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
         // constructor
         public Product()
         {

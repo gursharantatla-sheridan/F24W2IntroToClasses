@@ -11,11 +11,17 @@
             Console.WriteLine("Id = " + p1.Id);
 
 
-            AccountWithMethods myAcc = new AccountWithMethods(100);
-            Console.WriteLine("\nBalance: " + myAcc.GetBalance().ToString("C"));
+
+
+            //AccountWithMethods myAcc = new AccountWithMethods(100);
+            AccountWithProperties myAcc = new AccountWithProperties(100);
+
+            //Console.WriteLine("\nBalance: " + myAcc.GetBalance().ToString("C"));
+            Console.WriteLine("\nBalance: " + myAcc.Balance.ToString("C"));
 
             myAcc.Deposit(500);
-            Console.WriteLine("\nBalance: " + myAcc.GetBalance().ToString("C"));
+            //Console.WriteLine("\nBalance: " + myAcc.GetBalance().ToString("C"));
+            Console.WriteLine("\nBalance: " + myAcc.Balance.ToString("C"));
 
             try
             {
@@ -27,12 +33,11 @@
             }
             finally
             {
-                Console.WriteLine("\nBalance: " + myAcc.GetBalance().ToString("C"));
+                //Console.WriteLine("\nBalance: " + myAcc.GetBalance().ToString("C"));
+                Console.WriteLine("\nBalance: " + myAcc.Balance.ToString("C"));
             }
 
 
-            AccountWithProperties myAcc2 = new AccountWithProperties(100);
-            Console.WriteLine(myAcc2.Balance);
         }
     }
 }

@@ -27,5 +27,18 @@ namespace F24W2IntroToClasses
 		{
 			Balance = initialBalance;
 		}
+
+		public void Deposit(double amount)
+		{
+			Balance += amount;
+		}
+
+		public void Withdraw(double amount)
+		{
+			if (amount > Balance)
+                throw new Exception("Amount cannot be more than the balance");
+
+			Balance -= amount;
+        }
 	}
 }
